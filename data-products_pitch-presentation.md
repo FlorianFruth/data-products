@@ -17,7 +17,8 @@ Code Example
 ========================================================
 Here we see some calculation - fitting a linear model - performed by server.R using the input. As an example, we set input_x and input_y to concrete variables and determine the coefficients of the linear model.
 
-```{r}
+
+```r
 data(iris)
 input_x <- iris$Sepal.Length 
 input_y <- iris$Sepal.Width
@@ -27,15 +28,21 @@ model1 <- lm(input_y ~ input_x)
 summary(model1)$coeff[c(1,2)]
 ```
 
+```
+[1]  3.4189468 -0.0618848
+```
+
 Plot of Sepal Width vs. Sepal Length
 ========================================================
 Here, we plot Sepal Width vs. Sepal Length and display the fitted linear model (blue line).
-```{r, echo=TRUE, fig.height=4,  fig.width=12}
-plot(input_x, input_y, xlab = label_x, ylab = label_y, bty = "n", pch = 16, col = iris$Species); abline(model1, lwd=2, col="blue")
-```{r}
-```{r}
 
+```r
+plot(input_x, input_y, xlab = label_x, ylab = label_y, bty = "n", pch = 16, col = iris$Species); abline(model1, lwd=2, col="blue")
 ```
+
+![plot of chunk unnamed-chunk-2](data-products_pitch-presentation-figure/unnamed-chunk-2-1.png)
+
+
 
 ```
 
